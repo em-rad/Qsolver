@@ -1,1 +1,5 @@
-standards
+Standards:
+
+All functions as R scripts
+Headers indicating purpose of function and parameters
+Testing functions print parameters and results on error
