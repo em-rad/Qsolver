@@ -1,1 +1,11 @@
-docs readme
+Docs folder contains information about the quad solver project and how it is structured.
+
+Ownership shows all authors who have ownership of project.
+
+Programming Standard lists standard practices to be followed during production.
+
+System Testing summarizes what tests were built and how they are to run.
+
+Unit Testing summarizes what tests were built and what result is to be expected.
+
+Version control lists what platforms are being used and their versions.
