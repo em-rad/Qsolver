@@ -1,1 +1,13 @@
-tps reports
+- Current Week's TPS Report - 
+Date: 3/9/2020
+
+Overview: The Quad Solver is designed to take three double values from the user and return the formulated value(s). 
+The actor, user, inputs the three values into the Quad Solver function and in return recieves the final values.
+
+Actor: User
+System Interaction Role: Inputs Values
+Time Estimate: 1-2 days
+Risk: 0/10
+% Complete: 0
+
+Next Task: Input validation / equation solving
