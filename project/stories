@@ -1,1 +1,16 @@
-list of stories
+Story 1: 
+User inputs a b and c for quadratic function.
+System validates inputs for stability and format (sig figs). (translates float to double?)
+
+Story 2:
+System calculates the answer without losing precision.
+
+Story 3:
+System outputs results in order ---
+
+Story 4:
+Prompts user for next desired action. (Quit / Repeat)
+System validates action input.
+
+Story 5:
+System performs user inputted desired action.
