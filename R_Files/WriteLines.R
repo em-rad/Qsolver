@@ -3,24 +3,34 @@
   #Prints out final answers to console
 WriteLines <- function(output)
 {
-  cat("Results: ", output, "\n")
-  line <- readline(prompt="Type End or Again: ")
+  if(is.character(output))
+  {
+    cat("Results: ", output, "\n")
+  }
+  else
+  {
+    cat("Wrong value passed to WriteLines\n")
+  }
+  
+  line <- readline(prompt = "Type Done or Again: ")
+  
   while(!is.null(line))
   {
-    if(line == "End")
+    if((line == "Done") || (line == "done"))
     {
       line <- NULL
     }
-    else if(line == "Again")
+    else if((line == "Again") || (line == "again"))
     {
       ReadLine()
       line <- NULL
     }
     else
     {
-      line <- NULL
+      line <- readline(prompt = "Type End or Again: ")
     }
   }
-
+  
+  cat("Goodbye!")
 }
 WriteLines("a, b, c, x1, x2")
