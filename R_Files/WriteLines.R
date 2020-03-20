@@ -4,14 +4,14 @@
 WriteLines <- function(output)
 {
   cat("Results: ", output, "\n")
-  line <- readline(prompt="Type End or Repeat: ")
+  line <- readline(prompt="Type End or Again: ")
   while(!is.null(line))
   {
-    if(line == "Quit")
+    if(line == "End")
     {
-      quit()
+      line <- NULL
     }
-    else if(line == "Repeat")
+    else if(line == "Again")
     {
       ReadLine()
       line <- NULL
