@@ -9,10 +9,7 @@ ReadLine <- function()
   if(!is.na(as.numeric(a)) && !is.na(as.numeric(b)) && !is.na(as.numeric(c)))
   {
     #need to validate numeric range for a
-    
-    
-    line <- c(a, b, c)
-    WriteLines(as.character(line))
+    Solve(a, b, c)
   }
   else
   {
