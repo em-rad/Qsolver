@@ -31,6 +31,5 @@ WriteLines <- function(output)
     }
   }
   
-  cat("Goodbye!")
+  return("Goodbye!")
 }
-WriteLines("a, b, c, x1, x2")
