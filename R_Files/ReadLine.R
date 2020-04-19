@@ -9,6 +9,11 @@ ReadLine <- function()
   if(!is.na(as.numeric(a)) && !is.na(as.numeric(b)) && !is.na(as.numeric(c)))
   {
     #need to validate numeric range for a
+    if(a == 0)
+    {
+      cat("a cannot be 0\n")
+      ReadLine()
+    }
     Solve(a, b, c)
   }
   else
