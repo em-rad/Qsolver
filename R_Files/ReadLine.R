@@ -1,9 +1,6 @@
 #READ USER INPUT
-ReadLine <- function()
+ReadLine <- function(a,b,c)
 {
-  a <- readline(prompt = "Give value for a \n")
-  b <- readline(prompt = "Give value for b \n")
-  c <- readline(prompt = "Give value for c \n")
   
   #as.numeric will return NA if the value being transformed cannot be represented as a number
   if(!is.na(as.numeric(a)) && !is.na(as.numeric(b)) && !is.na(as.numeric(c)))
@@ -11,14 +8,35 @@ ReadLine <- function()
     #need to validate numeric range for a
     if(a == 0)
     {
-      cat("a cannot be 0\n")
-      ReadLine()
+      return(NA)
     }
+    
+    #check decimal number
+    ret<-decimalChkr(a)
+    ret<-decimalChkr(b)
+    ret<-decimalChkr(c)
+    
+    #if any value has decimal places > 4, round them down
+    if(ret==1){
+      cat("WARNING: 1 or more value(s) have more than 4 decimal places\nResult precision is at risk.\n")
+      a <- round(a, digits = 4)
+      b <- round(b, digits = 4)
+      c <- round(c, digits = 4)
+    }
+    
     Solve(a, b, c)
   }
   else
   {
-    cat("Expected input is 3 digits, try again or press 'esc' to leave\n")
-    ReadLine()
+    return(NA)
   }
+}
+
+#checks the num of characters to determine number of decimal places
+decimalChkr <- function(x){
+  x<-gsub("(.*)(\\.)|([0]*$)","",x)
+  if((nchar(x))>4){
+    return(1)  
+  }
+  return(0)
 }
